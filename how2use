@@ -1,0 +1,16 @@
+1.使用docker build产生新镜像
+
+docker build -t centos6-ssh . 
+
+
+2.检查 docker images中是否存在 centos6-ssh
+
+
+3.执行 :
+
+docker run -t -i centos6-base /bin/bash
+
+4.将Container直接commit成镜像
+#docker commit CONTAINER_ID IMAGE_NAME
+docker commit 83a9fb9eeefd centos6-mytest
+
